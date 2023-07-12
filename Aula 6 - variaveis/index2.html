@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!!</h1>
+    <script>
+        var n1 = Number(window.prompt ('Escreva um número: ')) /*Number.parseInt* ou Number.parseFloat */
+        var n2 = Number(window.prompt ('Escreva outro número: '))
+       var s = n1+ n2
+       window.alert(`A soma de ${n1} e ${n2} é ${s}`)
+       window.alert('A soma dos Números é '+s.toString( /*ou String(s)*/))
+
+       //não dá para somar porque uma caracteristica do prompt é apenas retornar strings, então se torna uma concatenação
+
+       //Para fazer a soma tem que transformar em número com os comandos Number.parseInt para inteiros ou Number.parseFloat para reais
+
+       //curiosidade, o float é float por causa do ponto dos números quebrados que fica "flutuando"
+
+       //Mas... pode se usar somente Number que ele reconhece se é inteiro ou se é real
+
+       //Para converter para string usa-se String(n) ou n.toString
+
+       /*Formatando strings
+       var s = 'JavaScript'
+       usando concatenação
+       'estou aprendendo' + s
+       usando template string com sinal de crase
+       `estou aprendendo ${s}`
+        exemplo do node:
+       > nome='Peterson'
+        'Peterson'
+        > idade=22
+        22
+        > nota=10
+        10
+        > 'O Aluno '+nome+' de '+idade+' anos, tirou nota '+nota
+        'O Aluno Peterson de 22 anos, tirou nota 10'
+        > `O aluno ${nome} de ${idade} anos tirou nota ${nota}`
+        'O aluno Peterson de 22 anos tirou nota 10'
+
+        outras formatações
+            var s = 'JavaScript'
+            s.length - quantos caracteres a setring tem
+            s.toUpperCase() - tudo para 'MAIÚSCULAS'
+            s.toLowerCase() - tudo para 'minusculas'
+
+       */
+
+    </script>
+</body>
+</html>

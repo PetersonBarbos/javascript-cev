@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* var s = 'JavaScript'
+            s.length - quantos caracteres a setring tem
+            s.toUpperCase() - tudo para 'MAIÚSCULAS'
+            s.toLowerCase() - tudo para 'minusculas'
+        */
+        var nome = window.prompt('Qual seu nome?')
+        document.write(`olá, <strong> ${nome} </strong>, seu nome tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em maiúsculas: ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculas: ${nome.toLowerCase()}<br>`)
+
+        /*Formatando números
+        > n1=1700.5
+        1700.5
+        > n1.toFixed(3) - ajustando as casas decimais
+        '1700.500'
+        > n1.toFixed(2).replace('.',',') trocando ponto por vírgula
+        '1700,50'
+        > n1.toLocaleString('pt-BR', {style:'currency', currency: 'BRL')
+        n1.toLocaleString('pt-BR', {style:'currency', currency: 'BRL') era para mostrar em reais
+                                                                    ^
+
+        Uncaught SyntaxError: Unexpected token ')'
+        */
+    </script>
+</body>
+</html>
