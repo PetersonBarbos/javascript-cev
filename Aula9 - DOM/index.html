@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(84, 131, 131);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">
+        Clique em mim
+    </div>
+    <script>
+        window.document.write('olá mundo')
+        window.document.write('<br>')
+        window.document.write(window.document.charset)
+        window.document.write('<br>')
+        window.document.write(window.navigator.appName)
+        window.document.write('<br>')
+        window.document.write(window.document.URL)
+        window.document.write('<br>')
+        //selecionando elementos por marca - getElementsByTagName() - seleciona mais de 1
+        var p1 = window.document.getElementsByTagName('p')[1]//[1] eu seleciono qual parágrafo eu quero e [0] é o primeiro
+        window.document.write(p1.innerText)
+        p1.style.color = 'red'
+        corpo = window.document.body
+        corpo.style.background = 'black'
+        window.alert(p1.innerHTML)// inneText pega o texto, innerHTML pega o texto e a formatação
+        // no alert ele escreveu a tag então não é bom usar innerHTML no alert
+
+        /*
+        Posso também selecionar elementos por
+
+        id - getElementById()
+        nome - getElementsByName()[] - se eu tenho a propriedade name
+        classe - getElementsByClassName()[]
+        */
+
+        var d = window.document.getElementById('msg')
+        d.innerText='modifiquei'
+        // se no lugar do id no html eu colocar name posso fazer isso daui por getElementsByName('msg')[0] ou class...
+
+        /* há uma forma mais atualizada de selecionar elementos que é por seletor, e vai usar os símbolos de id e class do css que são # e . respectivamente
+        querySelector()
+        ou
+        querySelectorAll()
+        */
+
+        fundo=window.document.querySelector('div#msg')
+        fundo.style.background = 'yellow'
+        fundo.style.color='black'
+
+    </script>
+</body>
+</html>
