@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area{
+            background-color: lightgreen;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+ <!--  <div id="area" onclick = "clicou()" onmouseenter="entrou()" onmouseout="saiu()">  fiz como cometário porque vou fazer com os listeners, mas fica aí para aprendizado-->
+    <div id="area">
+        interaja...
+    </div>
+    <script>
+        /* envento é qualquer evento que pode acontecer com a div, exemplo: eventos de mouse: mover o mouse para dentro da div, para fora, clicar...mas para isso eu preciso de funções que são linhas de códigos que vão ser chamadas quando o evento ocorrer*/
+        a = window.document.querySelector('div#area')
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function clicou(){
+            a.innerText='clicou'
+            a.style.background = color = 'red'
+        }
+        function entrou(){
+            a.innerText='entrou'
+        }
+
+        function saiu(){
+            a.innerText='saiu'
+            a.style.background = 'lightgreen'
+        }
+    </script>
+</body>
+</html>
