@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velocidade</title>
+</head>
+<body>
+    <h1>Calculando velocidade</h1>
+    Velocidade: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtvel = window.document.querySelector('input#txtvel')
+            var vel = Number(txtvel.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Sua velocidade foi de ${vel}km/h</p>`
+            if(vel > 50){
+                res.innerHTML += '<p>você foi <strong>multado</strong></p>'
+            }
+            //obs: as tags em html não funcionaram no innerText, só no inner.html
+        }
+    </script>
+</body>
+</html>
