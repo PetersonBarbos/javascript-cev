@@ -14,7 +14,9 @@ function calcular(){
             c++
         }
     }
-    /*var num = window.document.getElementById('num')
+    /* 
+    o que eu fiz
+    var num = window.document.getElementById('num')
     var res = window.document.getElementById('res')
     num2 = Number(num.value)
     var i = 0
