@@ -1,14 +1,29 @@
-function adcionar(){
-    let num = Number(window.document.getElementById('num'))
-    let vet = []  
-    let res = window.document.getElementById('res')
-    
-        if(num == vet[i] || num.length == 0){
-            window.alert('Escreva um número não escrito antes')
-       } else {
-        vet.push(num)
-        res.innerHTML += vet[i]
-       }
+let num = window.document.getElementById('num')
+let vet = []  
+let res = window.document.getElementById('res')
+
+function enumr(n){
+    if(Number(n)>=1 && Number(n)<=100){
+        return true
+    } else{
+        return false
+    }
+}
+function ntalist(n,l){
+    if(l.indexOf(Number(n)) == -1){
+        return true
+    } else{
+        return false
+    }
+}
+
+
+function adicionar(){
+    if(enumr(num.value) && ntalist(num.value,vet)){
+        window.alert('tudo ok')
+    } else {
+        window.alert('Número inválido ou já digitado')
+    }
     
 
 }
