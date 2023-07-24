@@ -20,10 +20,30 @@ function ntalist(n,l){
 
 function adicionar(){
     if(enumr(num.value) && ntalist(num.value,vet)){
-        window.alert('tudo ok')
+        vet.push(Number(num.value))
+        res.innerHTML+=`valor ${Number(num.value)} adicionado <br>`
     } else {
         window.alert('Número inválido ou já digitado')
     }
     
+}
+
+
+function analisar(){
+    let maior = vet[0]
+    let menor = vet[0]
+    let soma = 0
+    let media = 0
+    for (let i in vet){
+        if (vet[i]>maior){
+            maior=vet[i]
+        }
+        if(vet[i]< menor){
+            menor = vet[i]
+        }
+        soma += vet[i]
+        media = soma/vet.length
+    }
+    res.innerHTML += `<br> <br>maior = ${maior}, menor = ${menor}, soma = ${soma} e média = ${media}`
 
 }
